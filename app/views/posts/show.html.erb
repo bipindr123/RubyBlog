@@ -3,3 +3,5 @@
 <h3><%= @post.body %></h3>
 <br>
 <%= link_to "Edit post",edit_post_path %>
+<br>
+<%= link_to "Delete this", @post, method: :delete, data: { confirm: "are you sure?" } %>

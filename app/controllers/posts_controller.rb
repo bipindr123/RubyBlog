@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+  class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
@@ -40,6 +40,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path, :notice => "post has been deleted"
   end
 
 end
