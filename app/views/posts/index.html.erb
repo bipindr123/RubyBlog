@@ -1,8 +1,7 @@
 <h1>my Blog Posts</h1>
 <br>
-<h3>Sample post 1</h3>
-<p>This is the post</p>
-<%= @myvar %>
-<hr>
-<h3>Sample post 1</h3>
-<p>this is the second post</p>
+<% @posts.each do |post| %>
+  <h3><%= link_to post.title,post %></h3>
+  <p><%= post.body %></p>
+<% end %>
+<%= link_to "add new post",new_post_path %>
