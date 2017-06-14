@@ -17,13 +17,13 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:category_id, :title, :body)
+    params.require(:post).permit(:title, :body, :category_id)
   end
 
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to post_path, :notice => "your post is updated"
+      redirect_to post_path, :notice => "your post has been updated"
     else
         render "edit"
     end
@@ -37,9 +37,6 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
     @category = Category.all
-  end
-
-  def update
   end
 
   def destroy
