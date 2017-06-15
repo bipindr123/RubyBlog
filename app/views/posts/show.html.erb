@@ -1,7 +1,7 @@
 <h1><%= @post.title %></h1>
+<hr>
 <small><%= @post.created_at.strftime("%b %d. %y") %></small>
 <h3><%= @post.body %></h3>
 <br>
-<%= link_to "Edit post",edit_post_path %>
-<br>
-<%= link_to "Delete this", @post, method: :delete, data: { confirm: "are you sure?" } %>
+Category: <%= @post.category.name %>
+<p> <%= link_to "go back", posts_path %> </p>
