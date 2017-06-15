@@ -3,5 +3,5 @@
 <small><%= @post.created_at.strftime("%b %d. %y") %></small>
 <h3><%= @post.body %></h3>
 <br>
-Category: <%= @post.category.name %>
+Category: <%= link_to @post.category.name, @post.category %>
 <p> <%= link_to "go back", posts_path %> </p>
