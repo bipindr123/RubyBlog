@@ -13,7 +13,6 @@ gem 'rails', '~> 5.0.3'
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'devise'
-gem 'bcrypt'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

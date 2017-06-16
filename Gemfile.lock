@@ -214,7 +214,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  bcrypt
   byebug
   coffee-rails (~> 4.2)
   devise
