@@ -5,6 +5,7 @@
 
   def show
     @post = Post.find(params[:id])
+    @user = AdminUser.all
   end
 
   def post_params

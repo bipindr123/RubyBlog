@@ -1,6 +1,7 @@
 <h1><%= @post.title %></h1>
 <hr>
 <small><%= @post.created_at.strftime("%b %d. %y") %></small>
+<p>Created by  <%= @user.name %> </p>
 <h3><%= @post.body %></h3>
 <br>
 Category: <%= link_to @post.category.name, @post.category %>

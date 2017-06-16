@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Myrubyblog</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <% flash.each do |key,value| %>
-    <p><%= value %></p>
-    <% end %>
-    <%= yield %>
-  </body>
+<%= render "partials/header" %>
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+				<div class="flash-message">
+				<% flash.each do |key,value| %>
+				<p><%= value %></p>
+				<% end %>
+				</div>
+				<%= yield %><!--main view-->
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<%= render "partials/sidebar" %>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>&copy; 2017, sample test blog</p>
+	</div>
+</div>
+<!-- end #footer -->
+</body>
+</body>
 </html>
