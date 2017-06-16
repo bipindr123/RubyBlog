@@ -11,4 +11,17 @@
     params.require(:post).permit(:title, :body, :category_id)
   end
 
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post =  Post.create(params[post_params])
+    if @post.save
+      redirect_to posts_path notice: "Your Post was saved"
+    else
+      render "new"
+    end
+  end
+
 end
